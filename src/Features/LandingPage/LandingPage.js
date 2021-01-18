@@ -1,16 +1,17 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import FastImage from 'react-native-fast-image';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {moderateScale} from 'react-native-size-matters';
+import FastImage from 'react-native-fast-image';
 
-// icons
+// icon
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // component
+import Roboto from '../../Shared/Component/Roboto';
 import {BlueButton} from '../../Shared/Component/BlueButton';
 import {GrayDivider} from '../../Shared/Component/GrayDivider';
-import Roboto from '../../Shared/Component/Roboto';
+import Footer from '../../Shared/Component/Footer/AuthenticationFooter';
 
 // global formatting
 import {Size} from '../../Shared/Global/Config/Size';
@@ -19,11 +20,11 @@ import {Color} from '../../Shared/Global/Config/Color';
 
 export default function LandingPage(props) {
   const actionSignUp = () => {
-    props.navigation.navigate('Register');
+    props.navigation.push('Auth', {screen: 'Register'});
   };
 
   const actionLogin = () => {
-    props.navigation.navigate('Login');
+    props.navigation.push('Auth', {screen: 'Login'});
   };
 
   return (
@@ -58,6 +59,12 @@ export default function LandingPage(props) {
           />
         </TouchableOpacity>
       </View>
+
+      <Footer
+        onPress={actionLogin}
+        text="Already have an account?"
+        touchableText="  Log in"
+      />
     </SafeAreaView>
   );
 }
