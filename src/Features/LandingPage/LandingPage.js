@@ -30,7 +30,7 @@ export default function LandingPage(props) {
   return (
     <SafeAreaView
       style={[Layouting().flex1, Layouting().spaceBetween, styles.container]}>
-      <View style={[Layouting().flex1, Layouting().flexEnd]}>
+      <View style={[Layouting().centered, styles.logoContainer]}>
         <FastImage
           source={require('../../assets/images/logo.png')}
           resizeMode="contain"
@@ -73,9 +73,12 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: Size.wp4,
   },
+  logoContainer: {
+    flex: 2,
+  },
   logo: {
-    width: moderateScale(200),
-    height: moderateScale(200),
+    width: moderateScale(150),
+    height: moderateScale(150),
   },
   grayDivider: {
     marginTop: moderateScale(40),
