@@ -25,7 +25,7 @@ export const GrayDivider = ({
           {height: moderateScale(1), margin: Size.ms12},
         ]}
       />
-      <Roboto title={title} color={color} size={fontSize} type="Light" />
+      <Roboto title={title} color={color} size={fontSize} type="Medium" />
       <View
         backgroundColor={color}
         style={[

@@ -1,7 +1,12 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-export default function Roboto({title, color = 'black', size, type}) {
+export default function Roboto({
+  title,
+  color = 'black',
+  size,
+  type = 'Regular',
+}) {
   return (
     <Text
       style={{

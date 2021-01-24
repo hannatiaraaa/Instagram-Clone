@@ -48,6 +48,7 @@ export default function LandingPage(props) {
               Log In With Facebook
             </>
           }
+          fontSize={moderateScale(13)}
         />
         <GrayDivider title="OR" style={styles.grayDivider} />
         <TouchableOpacity activeOpacity={0.8} onPress={actionSignUp}>
