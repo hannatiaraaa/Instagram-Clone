@@ -15,6 +15,7 @@ export const BlueButton = ({
   title,
   fontSize = Size.ms12,
   textColor = 'white',
+  width = Size.wp92,
   disabled = false,
   style,
 }) => {
@@ -26,7 +27,7 @@ export const BlueButton = ({
       style={[
         Layouting().centered,
         {
-          width: Size.wp92,
+          width: width,
           height: moderateScale(40),
           borderRadius: Size.radius,
           backgroundColor: disabled ? Color.lightblue : Color.blue,

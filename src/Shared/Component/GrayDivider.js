@@ -13,7 +13,7 @@ import {Layouting} from '../Global/Style/Layout';
 export const GrayDivider = ({
   title,
   color = Color.gray,
-  fontSize = moderateVerticalScale(14),
+  fontSize = moderateScale(14),
   style,
 }) => {
   return (

@@ -8,6 +8,7 @@ import Login from '../Features/Login/Login';
 
 // component
 import Footer from './Component/Footer/AuthenticationFooter';
+import Home from '../Features/Home/Home';
 
 const Stack = createStackNavigator();
 
@@ -30,7 +31,11 @@ const Authentication = ({navigation, route}) => {
     <>
       <Stack.Navigator
         initialRouteName={routeScreen === 'Register' ? 'Register' : 'Login'}>
-        <Stack.Screen name="Log in" component={Login} />
+        <Stack.Screen
+          name="Log in"
+          component={Login}
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
 
@@ -60,6 +65,7 @@ export default function Navigations() {
         component={Authentication}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
 }
