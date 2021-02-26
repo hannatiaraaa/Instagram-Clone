@@ -61,5 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(4),
     paddingHorizontal: Size.wp4,
     width: widthPercentageToDP(88),
+    backgroundColor: '#FAFAFA',
+    borderColor: Color.gray,
   },
 });
